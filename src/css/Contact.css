@@ -1,0 +1,29 @@
+.container {
+    padding: 10px;
+    height: 100%;
+    width: 60%;
+    position: fixed;
+    z-index: 1000;
+    top: 4rem;
+    left: 0;
+    background-color: #ffff;
+    overflow-x: hidden;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container.open {
+    transform: translateX(0);
+}
+@media(max-width: 600px) {
+    .container {
+        width: 96%;
+        justify-content: start;
+        gap: 2rem;
+    }
+}
+

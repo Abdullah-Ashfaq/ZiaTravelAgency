@@ -5,9 +5,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 5px;
     height: 4rem;
-    /* position: fixed; */
+    position: fixed;
     z-index: 999;
     width: 100%;
     top: 0;
@@ -33,6 +33,9 @@ transition: all 0.3s ease-in-out;
     justify-content: space-between;
     gap: 1rem;
 
+}
+.links.side-nav-links {
+    flex-direction: column;
 }
 .link {
     list-style: none;
@@ -63,10 +66,13 @@ transition: all 0.3s ease-in-out;
     .links {
         display:none;
     }
+    .links.side-nav-links {
+        display: block;
+    }
 }
 
 .nav-btns {
-    margin-right: 15px;
+    /* margin-right: 10px; */
 }
 
 .side-nav {
@@ -78,7 +84,7 @@ transition: all 0.3s ease-in-out;
     right: 0;
     background-color: #ffff;
     overflow-x: hidden;
-    transition: 0.5s;
+   
     
     transform: translateX(110%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
