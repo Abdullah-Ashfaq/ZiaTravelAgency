@@ -4,6 +4,7 @@
     justify-content: space-between;
     /* height: 40vh; */
     font-family: 'EB Garamond', serif;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  }
  .left-side {
     width: 40%;
@@ -39,7 +40,7 @@
     padding: 10px;
     font-family: inherit;
     font-size: 24px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 
 
  }

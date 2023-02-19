@@ -21,10 +21,11 @@ const Home = () => {
 
       </div>
     </div>
-    <Services />
+    <Services name = "services" />
     <About />
-    <Footer/>
+    
    </div>
+   <Footer/>
    
  
    

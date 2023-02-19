@@ -60,7 +60,7 @@ const Navbar = () => {
         <div className="links">
           <li className="link"><Link to={"/"} style = {{textDecoration:"none", color:"gray"}}>Home</Link></li>
           <li className="link"><Link to={"/packages"} style = {{textDecoration:"none", color:"gray"}}>Packages</Link></li>
-          <li className="link">About</li>
+          {/* <li className="link">About</li> */}
           <li className="link" onClick={() => setIsContact(!isContact)}>Contact Us </li>
           
         </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
     <div className="links side-nav-links">
           <li className="link"><Link to={"/"} style = {{textDecoration:"none", color:"gray"}}>Home</Link></li>
           <li className="link"><Link to={"/packages"} style = {{textDecoration:"none", color:"gray"}}>Packages</Link></li>
-          <li className="link">About</li>
+          {/* <li className="link"><Link to={"/About"} style = {{textDecoration:"none", color:"gray"}}>About</Link></li> */}
           <li className="link" onClick={() => setIsContact(!isContact)}>Contact Us </li>
           
         </div>

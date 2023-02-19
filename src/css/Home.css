@@ -21,6 +21,7 @@
     
     display: flex;
     align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     /* background-color: #A1F7F7; */
     /* background-color: #7FF7F7; */
 }

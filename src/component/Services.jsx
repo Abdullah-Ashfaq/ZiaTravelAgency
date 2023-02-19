@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 
-const Services = () => {
+const Services = (props) => {
     const [value, setValue] = React.useState(0);
 
     React.useEffect(() => {
@@ -33,7 +33,7 @@ const Services = () => {
     <div className="services">
         <div className="left-side">
             <div className="heading">
-                Services
+                {props.name}
             </div>
             {/* <div className="text">
 
