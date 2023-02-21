@@ -1,0 +1,12 @@
+.packages {
+    max-height: 80vh;
+    min-height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.package-header {
+    height: 4rem;
+    border-bottom: 2px solid #58D5D3;
+
+}

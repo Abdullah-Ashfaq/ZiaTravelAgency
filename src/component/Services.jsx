@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/Services.css'
-import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 

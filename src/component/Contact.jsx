@@ -3,7 +3,9 @@ import '../css/Contact.css'
 import WestIcon from '@mui/icons-material/West';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import { Button, IconButton, InputAdornment, TextField } from '@mui/material';
+import Alert from '@mui/material/Alert';
 import { Stack } from '@mui/system';
+import axios from 'axios';
 
 const Contact = (props) => {
     const [firstName, setFirstName] = useState('')
@@ -11,10 +13,48 @@ const Contact = (props) => {
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
+    const [successMessage, setSuccessMessage]= useState(false);
+    const [erroMessage, setErrorMessage]= useState(false);
 
     const onIconClick = () => {
         const value = props.stateval === false;
         props.changeState(value)
+    }
+
+    const onFormSubmit = async (event) => {
+      event.preventDefault();
+      try {
+
+        const response = await axios.post(`https://63f157ed5703e063fa560d2c.mockapi.io/Contact`, {
+          firstName,
+          lastName,
+          email,
+          subject,
+          message
+        })
+        if (response) {
+          setFirstName('');
+          setLastName('');
+          setEmail('');
+          setSubject('');
+          setMessage('');
+          setSuccessMessage(true);
+          setTimeout(() => {
+            setSuccessMessage(false);
+          }, 3000)
+        }
+        
+      }     
+      
+      catch (error) {
+        setErrorMessage(true);
+        setTimeout(() => {
+          setErrorMessage(false);
+        }, 3000)
+        
+      }
+     
+
     }
 
   return (
@@ -27,7 +67,7 @@ const Contact = (props) => {
         </div>
         
         <div>
-        <form action="POST">
+        <form action="POST" onSubmit={onFormSubmit}>
             <Stack direction='row' spacing={8}  marginBottom = {5}>
 
                 <TextField variant='standard'
@@ -97,6 +137,20 @@ const Contact = (props) => {
                 />
             </Stack>
             <Button type='submit' color='primary' size='large' variant='contained' >Submit</Button>
+            
+            {successMessage &&
+            <Alert severity="success" color="info">
+            Your Message has been sent
+            </Alert>
+            
+            }
+            {erroMessage &&
+            <Alert variant="filled" severity="error">
+            There's an error while sending your response 
+            </Alert>
+            
+            }
+            
         </form>
         </div>
         
