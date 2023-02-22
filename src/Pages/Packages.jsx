@@ -49,6 +49,11 @@ const Packages = () => {
           </TextField>
           
         </div>
+        <div className="packages-container">
+          <div className="package"> </div>
+          <div className="package"> </div>
+          <div className="package"> </div>
+        </div>
 
       </div>
 

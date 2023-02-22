@@ -9,32 +9,32 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 
 const Services = (props) => {
-    const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0);
 
-    React.useEffect(() => {
-      const updateValue = () => {
-        if (window.innerWidth < 600) {
-          setValue(1);
-        } else {
-          setValue(2);
-        }
-      };
-  
-      window.addEventListener('resize', updateValue);
-      updateValue();
-  
-      return () => {
-        window.removeEventListener('resize', updateValue);
-      };
-    }, []);
+  React.useEffect(() => {
+    const updateValue = () => {
+      if (window.innerWidth < 600) {
+        setValue(1);
+      } else {
+        setValue(2);
+      }
+    };
+
+    window.addEventListener('resize', updateValue);
+    updateValue();
+
+    return () => {
+      window.removeEventListener('resize', updateValue);
+    };
+  }, []);
   return (
     <>
-    <div className="services">
+      <div className="services">
         <div className="left-side">
-            <div className="heading">
-                {props.name}
-            </div>
-            {/* <div className="text">
+          <div className="heading">
+            {props.name}
+          </div>
+          {/* <div className="text">
 
                 Our travel agency provides services for Hajj & Umrah
                 and tourism. The agency offers assistance for travelers
@@ -51,39 +51,39 @@ const Services = (props) => {
 
 
         <div className="right-side">
-                
-            <Swiper
+
+          <Swiper
             slidesPerView={value}
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 4500,
-                disableOnInteraction: false,
+              delay: 4500,
+              disableOnInteraction: false,
             }}
             pagination={{
-            clickable: true,
+              clickable: true,
             }}
-            modules={[Autoplay,Pagination]}
+            modules={[Autoplay, Pagination]}
             className="mySwiper">
 
-                <SwiperSlide className='swiper-slide'><img src="world-tour.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide className='swiper-slide'><img src="animated-hajj.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide className='swiper-slide'><img src="uae.avif" alt="" /></SwiperSlide>
-                <SwiperSlide className='swiper-slide'><img src="iran-flag-ribbon.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide className='swiper-slide'><img src="ml.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide className='swiper-slide'><img src="iraq.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide className='swiper-slide' style={{objectFit: "contain"}}
-                ><img src="Thailand.jpg" alt="" /></SwiperSlide>
-    
-            </Swiper>
-        
+            <SwiperSlide className='swiper-slide'><img src="world-tour.jpg" alt="" /></SwiperSlide>
+            <SwiperSlide className='swiper-slide'><img src="animated-hajj.jpg" alt="" /></SwiperSlide>
+            <SwiperSlide className='swiper-slide'><img src="uae.avif" alt="" /></SwiperSlide>
+            <SwiperSlide className='swiper-slide'><img src="iran-flag-ribbon.jpg" alt="" /></SwiperSlide>
+            <SwiperSlide className='swiper-slide'><img src="ml.jpg" alt="" /></SwiperSlide>
+            <SwiperSlide className='swiper-slide'><img src="iraq.jpg" alt="" /></SwiperSlide>
+            <SwiperSlide className='swiper-slide' style={{ objectFit: "contain" }}
+            ><img src="Thailand.jpg" alt="" /></SwiperSlide>
+
+          </Swiper>
+
 
 
         </div>
-    </div>
-    
-    
-    
+      </div>
+
+
+
     </>
   )
 }

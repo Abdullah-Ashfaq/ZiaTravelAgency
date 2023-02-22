@@ -9,30 +9,25 @@ import About from '../component/About'
 const Home = () => {
   const navigate = useNavigate()
   return (
-   <>
-   <Navbar />
-   <div className="main">
-    <div className="header">
-      <div className="header-info">
-       <div className="header-text">
-        Your Journey
-       </div>
-       <button className="header-btn" onClick={() => navigate("/packages")}>Just One Click Away</button>
+    <>
+      <Navbar />
+      <div className="main">
+        <div className="header">
+          <div className="header-info">
+            <div className="header-text">
+              Your Journey
+            </div>
+            <button className="header-btn" onClick={() => navigate("/packages")}>Just One Click Away</button>
+
+          </div>
+        </div>
+        <Services name="services" />
+        <About />
 
       </div>
-    </div>
-    <Services name = "services" />
-    <About />
-    
-   </div>
-   <Footer/>
-   
- 
-   
-   
-   
-   
-   </>
+      <Footer />
+
+    </>
   )
 }
 
