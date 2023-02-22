@@ -8,5 +8,14 @@
 .package-header {
     height: 4rem;
     border-bottom: 2px solid #58D5D3;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: flex-end;
 
+}
+@media(max-width:780px){
+    .packages{
+        width: 100%;
+    }
 }
