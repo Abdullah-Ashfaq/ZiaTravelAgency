@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="copyright">
-        <p>Copyright &copy; 2023 Zia Travel and Tours Pvt Ltd. All rights reserved.</p>
+        <p>Copyright &copy; 2023 Zia Travel and Tours Pvt Ltd.</p>
       </div>
     </>
   )
